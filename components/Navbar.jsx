@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
 import {IoMenu} from 'react-icons/io5'
-
+import SideBar from './SideBar'
 const Navbar = () => {
   const [isClicked, setIsClicked] = useState(false)
   const handleClick=()=>{
@@ -22,7 +22,9 @@ const Navbar = () => {
                 className='text-3xl text-light opacity-65' onClick={()=>handleClick()}
             />
         </div>
-
+        {isClicked&&(
+          <SideBar/>
+        )}
     </nav>
   )
 }

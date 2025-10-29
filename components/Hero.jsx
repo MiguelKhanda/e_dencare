@@ -14,7 +14,7 @@ const Hero = () => {
             muted
             playsInline
             onContextMenu={(e) => e.preventDefault()}
-            className='w-full h-screen object-cover opacity-20 z-10 absolute '
+            className='w-full h-screen object-cover opacity-40 z-10 absolute '
         >
             <source src = '/videos/Bg-Video.webm' type='video/webm'/>
         </video>

@@ -17,18 +17,20 @@ const Navbar = () => {
             priority
             className='opacity-100 w-20'
         />
-        <div className="menu p-2 bg-accent z-50 absolute right-10 sm:hidden">
+       
           {!isClicked ?(
-            <IoMenu
+             <div className="menu p-2 bg-accent z-50 absolute right-10 sm:hidden">
+                <IoMenu
                 className='text-3xl text-light opacity-65 z-50 sm:hidden' onClick={()=>handleClick()}
-            />
+                />
+              </div>
             ):(
-              <IoClose 
-              className='text-3xl' onClick={()=>handleClick()}
-              />
-            )}
-            
-        </div>
+              <div className="menu p-2 bg-primary z-50 absolute right-10 sm:hidden">
+                <IoClose 
+                  className='text-3xl' onClick={()=>handleClick()}
+                />
+              </div>
+            )}            
         {isClicked&&(
           <SideBar/>
         )}

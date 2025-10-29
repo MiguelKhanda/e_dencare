@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <nav className='fixed flex w-full bg-primary items-center justify-between  px-4 py-4 backdrop-blur-md opacity-70 top-0 left-0 border-b-2 border-light'>
         <Image
-            src='/images/logo_changed.jpg'
+            src='/images/background_home.svg'
             alt='EdenCare logo'
             width={60}
             height={60}

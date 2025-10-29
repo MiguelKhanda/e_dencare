@@ -9,6 +9,9 @@ const Hero = () => {
     <section className=" [background:radial-gradient(125%_125%_at_50%_10%,#252627_55%,#6BD425_100%)] flex items-center h-screen">
         <Navbar/>
         <motion.video
+            initial={{x:-1000}}
+            animate={{x:0}}
+            transition={{duration:2, delay:2}}
             autoPlay
             loop
             muted

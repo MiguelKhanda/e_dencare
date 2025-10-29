@@ -20,7 +20,7 @@ const Hero = () => {
                 initial={{y:-100, scale:0}}
                 animate={{y:0, scale:1}}
                 transition={{duration:2, ease:'easeInOut'}}
-                src= '/images/background_home.png'
+                src= '/images/background_home.svg'
                 width={40}
                 height={40}
                 alt='Ilustration'

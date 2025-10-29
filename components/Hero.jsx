@@ -6,7 +6,7 @@ import Navbar from "./Navbar"
 const Hero = () => {
     const MotionImage = motion.create(Image)
   return (
-    <section className=" [background:radial-gradient(125%_125%_at_50%_10%,#252627_55%,#6BD425_100%)] flex items-center h-screen">
+    <section className="[background:radial-gradient(125%_125%_at_50%_10%,#252627_55%,#6BD425_100%)] flex items-center h-screen">
         <Navbar/>
         <motion.video
             initial={{x:-2000}}
@@ -26,7 +26,7 @@ const Hero = () => {
             initial={{y:-10, scale:0}}
             animate={{y:0, scale:1}}
             transition={{duration:2,}}
-            className="-mt-10 text-light text-xl"><span className=" text-primary">
+            className="mt-20 text-light text-xl"><span className=" text-primary">
                 Eden</span>Care
             </motion.h1>
             <MotionImage

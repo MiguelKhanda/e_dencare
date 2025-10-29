@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { useState } from 'react'
-import {IoMenu} from 'react-icons/io5'
+import {IoClose, IoMenu} from 'react-icons/io5'
 import SideBar from './SideBar'
 const Navbar = () => {
   const [isClicked, setIsClicked] = useState(false)
@@ -17,10 +17,17 @@ const Navbar = () => {
             priority
             className='opacity-100 w-20'
         />
-        <div className="menu p-2 bg-accent z-50 absolute right-10">
+        <div className="menu p-2 bg-accent z-50 absolute right-10 sm:hidden">
+          {!isClicked ?(
             <IoMenu
-                className='text-3xl text-light opacity-65 z-50' onClick={()=>handleClick()}
+                className='text-3xl text-light opacity-65 z-50 sm:hidden' onClick={()=>handleClick()}
             />
+            ):(
+              <IoClose 
+              className='text-3xl' onClick={()=>handleClick()}
+              />
+            )}
+            
         </div>
         {isClicked&&(
           <SideBar/>

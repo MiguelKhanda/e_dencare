@@ -8,6 +8,16 @@ const Hero = () => {
   return (
     <section className=" [background:radial-gradient(125%_125%_at_50%_10%,#252627_55%,#6BD425_100%)] flex items-center h-screen">
         <Navbar/>
+        <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            onContextMenu={(e) => e.preventDefault()}
+            className='w-full h-screen object-cover opacity-20 z-10 absolute '
+        >
+            <source src = '/videos/Bg-Video.webm' type='video/webm'/>
+        </video>
         <div className="flex items-center flex-col text-light w-[90%] mx-auto  top-0">
             <motion.h1 
             initial={{y:-10, scale:0}}

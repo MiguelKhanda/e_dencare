@@ -21,17 +21,17 @@ const Hero = () => {
                 animate={{y:0, scale:1}}
                 transition={{duration:2, ease:'easeInOut'}}
                 src= '/images/background_home.svg'
-                width={40}
-                height={40}
+                width={20}
+                height={20}
                 alt='Ilustration'
-                className="w-90 mb-5 shadow-2xl shadow-accent rounded-full px-2 py-5"
+                className="w-50 mb-5 shadow-2xl shadow-accent rounded-full px-2 py-2"
                 loading="eager"
             />
             <motion.p 
             initial={{y:30, scale:0}}
             animate={{y:0, scale:1}}
             transition={{duration:2}}
-            className="text-center text-xl bg-linear-to-r from-light to-primary bg-clip-text text-transparent">
+            className="text-center text-md bg-linear-to-r from-light to-primary bg-clip-text text-transparent">
                 EdenCare is a bridge. Education, the environment, agriculture, weather, and society. All in one place. 
             </motion.p>
             <Button text='Consult'/>

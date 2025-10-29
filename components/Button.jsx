@@ -10,7 +10,7 @@ const Button = ({text, isAnimate}) => {
      whileHover={{scale:1.3, backgroundColor:'#19381F',color:'white'}}
      whileTap={{scale:1.3, backgroundColor:'#19381F',color:'white'}}
      transition={{duration:2, ease:'easeInOut'}}
-     className='bg-primary py-4 px-4 rounded-2xl text-2xl mt-7 text-dark'>
+     className='bg-primary py-4 px-4 rounded-2xl text-md mt-7 text-dark'>
         {text}
     </motion.button>
   )

@@ -5,16 +5,16 @@ const Navbar = () => {
   return (
     <nav className='fixed flex w-full bg-primary items-center justify-between  px-4 py-4 backdrop-blur-md opacity-70 top-0 left-0 border-b-2 border-light'>
         <Image
-            src='/images/background_home.svg'
+            src='/images/logo.jpg'
             alt='EdenCare logo'
-            width={60}
-            height={60}
+            width={50}
+            height={50}
             priority
-            className='opacity-70'
+            className='opacity-70 w-10'
         />
-        <div className="menu px-2 bg-accent">
+        <div className="menu px-1 bg-accent">
             <IoMenu
-                className='text-5xl text-light opacity-65' 
+                className='text-2xl text-light opacity-65' 
             />
         </div>
 

@@ -6,18 +6,18 @@ import Navbar from "./Navbar"
 const Hero = () => {
     const MotionImage = motion.create(Image)
   return (
-    <section className=" bg-dark flex items-center h-screen">
+    <section className=" [background:radial-gradient(125%_125%_at_50%_10%,#252627_65%,#6BD425_100%)] flex items-center h-screen">
         <Navbar/>
         <div className="flex items-center flex-col text-light w-[90%] mx-auto  top-0">
             <motion.h1 
-            initial={{y:-100, scale:0}}
+            initial={{y:-10, scale:0}}
             animate={{y:0, scale:1}}
             transition={{duration:2,}}
-            className="mt-0 text-light text-4xl"><span className=" text-primary">
+            className="-mt-10 text-light text-xl"><span className=" text-primary">
                 Eden</span>Care
             </motion.h1>
             <MotionImage
-                initial={{y:-100, scale:0}}
+                initial={{y:-10, scale:0}}
                 animate={{y:0, scale:1}}
                 transition={{duration:2, ease:'easeInOut'}}
                 src= '/images/background_home.svg'

@@ -10,7 +10,7 @@ const Navbar = () => {
             width={50}
             height={50}
             priority
-            className='opacity-70 w-10'
+            className='opacity-100 w-10'
         />
         <div className="menu px-1 bg-accent">
             <IoMenu

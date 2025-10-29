@@ -17,7 +17,7 @@ const Navbar = () => {
             priority
             className='opacity-100 w-20'
         />
-        <div className="menu p-2 bg-accent">
+        <div className="menu p-2 bg-accent z-50">
             <IoMenu
                 className='text-3xl text-light opacity-65' onClick={()=>handleClick()}
             />

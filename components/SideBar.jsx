@@ -1,15 +1,17 @@
 import {motion} from 'framer-motion'
 import { useState } from 'react'
 import { BiLogoFacebook, BiLogoInstagram, BiLogoTwitter } from 'react-icons/bi'
-import { IoClose } from 'react-icons/io5'
-const SideBar = ({isOpen, setIsOpen}) => {
+import { IoClose,IoMenu} from 'react-icons/io5'
+const SideBar = ({isOpen}) => {
     const [x, setX] = useState(0)
+    const [isClicked, setIsClicked] = useState(isOpen)
     const handleClick = () =>{
       setX(200)
+      setIsClicked(!isClicked)
     }
   return (
     <div>
-       {isOpen && (  <motion.div 
+       {isClicked && (  <motion.div 
           initial={{x:200}}
           animate={{x:x}}
           transition={{duration:0.5, ease:'easeInOut'}}
@@ -30,6 +32,17 @@ const SideBar = ({isOpen, setIsOpen}) => {
               <BiLogoTwitter size={30} className='hover:text-primary hover:bg-dark text-center'/>
           </ul>
       </motion.div>)}
+      {
+        isClicked && (
+          <div className='bg-accent p-2 rounded'>
+            <IoMenu
+              size={30}
+              className='text-3xl text-light opacity-65 z-50'
+              onClick={() =>handleMenu()}
+            />
+          </div>
+        )
+      }
     </div>
   )
 }

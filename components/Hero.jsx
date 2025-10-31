@@ -44,10 +44,10 @@ const Hero = () => {
             initial={{y:30, scale:0}}
             animate={{y:0, scale:1}}
             transition={{duration:2}}
-            className="text-center text-md bg-linear-to-r from-light to-primary bg-clip-text text-transparent">
+            className="text-center text-md bg-linear-to-r from-light to-primary bg-clip-text text-transparent md:text-xl">
                 EdenCare is a bridge. Education, the environment, agriculture, weather, and society. All in one place. 
             </motion.p>
-            <Button text='Consult'/>
+            <Button text='Consult' className='hover:bg-accent'/>
         </div>
     </section>
 )

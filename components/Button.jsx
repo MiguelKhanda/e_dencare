@@ -4,15 +4,14 @@ import React from 'react'
 
 const Button = ({text, isAnimate}) => {
   return (
-    <motion.button 
+    <motion.div
      initial={{y:30, scale:0}}
      animate={{y:0, scale:1}}
-     whileHover={{scale:1.3, backgroundColor:'#19381F',color:'white'}}
-     whileTap={{scale:1.3, backgroundColor:'#19381F',color:'white'}}
      transition={{duration:2, ease:'easeInOut'}}
-     className='bg-primary py-4 px-4 rounded-2xl text-md mt-7 text-dark'>
-        {text}
-    </motion.button>
+     className='opacity-100 z-50'
+     >
+      <button className='hover:opacity-50 p-4 bg-primary rounded-2xl text-md mt-7 text-dark md:px-8 md:py-6 md:text-lg hover:text-light'>{text}</button>
+    </motion.div>
   )
 }
 

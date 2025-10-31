@@ -21,7 +21,7 @@ const Navbar = () => {
             priority
             className='opacity-100 w-20 hover:shadow-2xl shadow-accent rounded-xl p-2'
         />
-        <ul className='gap-3 items-center justify-center hidden text-xl sm:flex md:gap-5'>
+        <ul className='gap-1 items-center justify-center hidden md:text-xl sm:flex md:gap-5 text-md'>
           <li className='p-4 hover:text-secondary hover:bg-accent rounded'>Hero</li>
           <li className='p-4 hover:text-secondary hover:bg-accent rounded'>About</li>
           <li className='p-4 hover:text-secondary hover:bg-accent rounded'>Services</li>
@@ -33,16 +33,16 @@ const Navbar = () => {
           <BiLogoInstagram size={28} className='hover:text-secondary'/>
           <BiLogoTwitter size={28} className='hover:text-secondary'/>
         </ul>
-          {!isClicked &&(
+          {!isClicked&&(
              <motion.div 
-             className="menu p-2 bg-accent z-50 absolute right-10 sm:hidden">
+             className="menu p-2 rounded bg-accent z-50 absolute right-10 sm:hidden">
                 <IoMenu
                 className='text-3xl text-light opacity-65 z-50 sm:hidden' onClick={()=>handleClick()}
                 />
               </motion.div>
             )}            
         {isClicked&&(
-          <SideBar isOpen={isClicked} setIsOpen={setIsClicked}/>
+          <SideBar isOpen={isClicked}/>
         )}
     </nav>
   )

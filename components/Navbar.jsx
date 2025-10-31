@@ -17,7 +17,7 @@ const Navbar = () => {
   const MotionIcon = motion.create(IoMenu)
   return (
     <ToggleContext value = {[isClicked, setIsClicked]}>
-      <nav className='fixed flex w-full bg-primary items-center justify-between  px-4 py-4 backdrop-blur-md opacity-70 top-0 left-0 border-b-2 border-accent z-50'>
+      <nav className='absolute flex w-full bg-primary items-center justify-between sm  p-2 backdrop-blur-md opacity-70 top-0 left-0 border-b-2 border-accent z-50'>
           <Image
               src='/images/logo.png'
               alt='EdenCare logo'

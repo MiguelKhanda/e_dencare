@@ -11,13 +11,13 @@ const Hero = () => {
         <motion.video
             initial={{x:-2000}}
             animate={{x:0}}
-            transition={{duration:2, delay:2}}
+            transition={{duration:1, delay:2}}
             autoPlay
             loop
             muted
             playsInline
             onContextMenu={(e) => e.preventDefault()}
-            className='w-full h-screen object-cover opacity-20 z-10 absolute inset-0'
+            className='w-full h-screen object-cover opacity-20 z-10 absolute'
         >
             <source src = '/videos/Bg-Video.webm' type='video/webm'/>
         </motion.video>

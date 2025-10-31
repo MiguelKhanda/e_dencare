@@ -1,28 +1,35 @@
 import {motion} from 'framer-motion'
 import { BiLogoFacebook, BiLogoInstagram, BiLogoTwitter } from 'react-icons/bi'
-
-const SideBar = () => {
+import { IoClose } from 'react-icons/io5'
+const SideBar = ({isOpen, setIsOpen}) => {
+    const handleClick = () =>{
+      setIsOpen(!isOpen)
+    }
   return (
-    <motion.div 
-        initial={{x:100}}
-        animate={{x:0}}
-        exit={{x:100}}
-        transition={{duration:1, ease:'easeInOut'}}
-        className="absolute right-0 top-0 bg-accent px-10 z-40 h-screen flex flex-col gap-5 text-secondary text-md">
-        
-        <ul className='mt-40 flex flex-col gap-5'>
-            <li>Hero</li>
-            <li>About</li>
-            <li>Services</li>
-            <li>Choice</li>
-            <li>Contact</li>
-        </ul>
-        <ul className='flex gap-2'>
-            <BiLogoFacebook size={20}/>
-            <BiLogoInstagram size={20}/>
-            <BiLogoTwitter size={20}/>
-        </ul>
-    </motion.div>
+    <div>
+       {isOpen && (  <motion.div 
+          initial={{x:100}}
+          animate={{x:0}}
+          exit={{x:100}}
+          transition={{duration:0.5, ease:'easeInOut'}}
+          className="absolute right-0 top-0 bg-accent px-10 z-40 h-screen flex flex-col gap-5 text-secondary text-md items-center md:hidden">
+          <IoClose
+              className=' mt-10 text-3xl hover:text-primary' onClick={()=>handleClick()}
+          />
+          <ul className='mt-20 flex flex-col gap-5'>
+              <li className='hover:text-primary hover:bg-dark p-2 rounded text-center'>Hero</li>
+              <li className='hover:text-primary hover:bg-dark p-2 rounded text-center'>About</li>
+              <li className='hover:text-primary hover:bg-dark p-2 rounded text-center'>Services</li>
+              <li className='hover:text-primary hover:bg-dark p-2 rounded text-center'>Choice</li>
+              <li className='hover:text-primary hover:bg-dark p-2 rounded text-center'>Contact</li>
+          </ul>
+          <ul className='flex gap-2'>
+              <BiLogoFacebook size={30} className='hover:text-primary hover:bg-dark text-center'/>
+              <BiLogoInstagram size={30} className='hover:text-primary hover:bg-dark text-center'/>
+              <BiLogoTwitter size={30} className='hover:text-primary hover:bg-dark text-center'/>
+          </ul>
+      </motion.div>)}
+    </div>
   )
 }
 

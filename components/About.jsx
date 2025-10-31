@@ -5,6 +5,7 @@ const About = () => {
   return (
     <div className="h-[60vh] flex flex-col  items-center mb-20">
       <Image 
+      alt="background"
        src='images/about-bg.svg'
        width={40}
        height={40}

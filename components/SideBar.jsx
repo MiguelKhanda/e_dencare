@@ -1,19 +1,26 @@
+'use client'
 import {motion} from 'framer-motion'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import { BiLogoFacebook, BiLogoInstagram, BiLogoTwitter } from 'react-icons/bi'
-import { IoClose,IoMenu} from 'react-icons/io5'
-const SideBar = ({isOpen}) => {
-    const [x, setX] = useState(0)
-    const [isClicked, setIsClicked] = useState(isOpen)
-    const handleClick = () =>{
-      setX(200)
-      setIsClicked(!isClicked)
-    }
+import { IoClose} from 'react-icons/io5'
+import { ToggleContext } from './Navbar'
+
+
+const SideBar = () => {
+  const [isClicked, setIsClicked] = useContext(ToggleContext)
+  const [toggled, setToggled] = useState(0)
+  const handleClick = () => {
+    setToggled(200)
+    setTimeout(() => {
+        setIsClicked(!isClicked)
+    },500)
+  
+  }
   return (
     <div>
-       {isClicked && (  <motion.div 
+        <motion.div 
           initial={{x:200}}
-          animate={{x:x}}
+          animate={{x:toggled}}
           transition={{duration:0.5, ease:'easeInOut'}}
           className="absolute right-0 top-0 bg-accent px-10 z-40 h-screen flex flex-col gap-5 text-secondary text-md items-center md:hidden">
           <IoClose
@@ -31,18 +38,7 @@ const SideBar = ({isOpen}) => {
               <BiLogoInstagram size={30} className='hover:text-primary hover:bg-dark text-center'/>
               <BiLogoTwitter size={30} className='hover:text-primary hover:bg-dark text-center'/>
           </ul>
-      </motion.div>)}
-      {
-        isClicked && (
-          <div className='bg-accent p-2 rounded'>
-            <IoMenu
-              size={30}
-              className='text-3xl text-light opacity-65 z-50'
-              onClick={() =>handleMenu()}
-            />
-          </div>
-        )
-      }
+      </motion.div>
     </div>
   )
 }

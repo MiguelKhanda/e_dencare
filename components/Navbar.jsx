@@ -1,5 +1,5 @@
 'use client'
-import './Navbar.module.css'
+
 import {motion} from 'framer-motion'
 import Image from 'next/image'
 import { useState } from 'react'
@@ -20,16 +20,16 @@ const Navbar = () => {
             width={60}
             height={70}
             priority
-            className='opacity-100 w-20'
+            className='opacity-100 w-20 hover:shadow-2xl shadow-accent rounded-xl p-2'
         />
-        <ul className='gap-5 items-center justify-center hidden text-xl sm:flex'>
-          <li>Hero</li>
-          <li>About</li>
-          <li>Services</li>
-          <li>Choice</li>
-          <li>Contact</li>
+        <ul className='gap-3 items-center justify-center hidden text-xl sm:flex md:gap-5'>
+          <li className='p-4 hover:text-secondary hover:bg-accent rounded'>Hero</li>
+          <li className='p-4 hover:text-secondary hover:bg-accent rounded'>About</li>
+          <li className='p-4 hover:text-secondary hover:bg-accent rounded'>Services</li>
+          <li className='p-4 hover:text-secondary hover:bg-accent rounded'>Choice</li>
+          <li className='p-4 hover:text-secondary hover:bg-accent rounded'>Contact</li>
         </ul>
-        <ul className='gap-2  hidden sm:flex'>
+        <ul className='gap-2  hidden sm:flex md:gap-6'>
           <BiLogoFacebook size={25} className='hover:text-secondary'/>
           <BiLogoInstagram size={25} className='hover:text-secondary'/>
           <BiLogoTwitter size={25} className='hover:text-secondary'/>

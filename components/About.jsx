@@ -3,15 +3,15 @@ import Image from "next/image"
 
 const About = () => {
   return (
-    <div>
+    <div className="h-[60vh] flex flex-col  items-center mb-20">
       <Image 
        src='images/about-bg.svg'
        width={40}
        height={40}
-       className="w-full  mt-6 -z-10 absolute opacity-50 h-[80vh]"
+       className="w-full -z-10 absolute opacity-50 object-cover h-2/3 mt-20"
       />
       <h1 className="text-primary text-2xl text-center mt-8">About Us</h1>
-      <div className="text-dark w-[90%] mx-auto mt-8 tracking-wide mb-20">
+      <div className="text-dark w-[90%] mx-auto mt-8 tracking-wide">
         <p>
           EdenCare Consultants is a premier consulting firm that delivers comprehensive and innovative solutions
           across multiple sectors.

@@ -1,16 +1,17 @@
 import {motion} from 'framer-motion'
+import { useState } from 'react'
 import { BiLogoFacebook, BiLogoInstagram, BiLogoTwitter } from 'react-icons/bi'
 import { IoClose } from 'react-icons/io5'
 const SideBar = ({isOpen, setIsOpen}) => {
+    const [x, setX] = useState(0)
     const handleClick = () =>{
-      setIsOpen(!isOpen)
+      setX(200)
     }
   return (
     <div>
        {isOpen && (  <motion.div 
-          initial={{x:100}}
-          animate={{x:0}}
-          exit={{x:100}}
+          initial={{x:200}}
+          animate={{x:x}}
           transition={{duration:0.5, ease:'easeInOut'}}
           className="absolute right-0 top-0 bg-accent px-10 z-40 h-screen flex flex-col gap-5 text-secondary text-md items-center md:hidden">
           <IoClose

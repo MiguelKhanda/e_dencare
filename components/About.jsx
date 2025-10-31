@@ -3,13 +3,13 @@ import Image from "next/image"
 
 const About = () => {
   return (
-    <div className="h-[60vh] flex flex-col  items-center mb-20">
+    <div className="h-[60vh] flex flex-col  items-center mb-20 bg-light">
       <Image 
       alt="background"
        src='images/about-bg.svg'
        width={40}
        height={40}
-       className="w-full -z-10 absolute opacity-50 object-cover h-2/3 mt-20"
+       className="w-full z-10 absolute opacity-30 object-cover"
       />
       <h1 className="text-primary text-2xl text-center mt-8">About Us</h1>
       <div className="text-black w-[90%] mx-auto mt-8 tracking-wide">

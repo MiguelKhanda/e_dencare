@@ -11,7 +11,7 @@ const Hero = () => {
         <motion.video
             initial={{x:-2000}}
             animate={{x:0}}
-            transition={{duration:1, delay:2}}
+            transition={{duration:2, delay:2}}
             autoPlay
             loop
             muted

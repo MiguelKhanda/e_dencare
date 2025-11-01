@@ -12,7 +12,7 @@ const About = () => {
        alt="background"
        src='/images/about-bg.jpg'
        fill
-       className="object-cover -z-20 opacity-10 inset-0"
+       className="object-cover -z-50 opacity-10 inset-0"
        priority
       />
       <h1 className="text-primary text-2xl text-center mt-8">About Us</h1>

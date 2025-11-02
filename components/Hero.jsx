@@ -26,7 +26,7 @@ const Hero = () => {
             initial={{y:-10, scale:0}}
             animate={{y:0, scale:1}}
             transition={{duration:2,}}
-            className="mt-20 text-light text-xl"><span className=" text-primary">
+            className="mt-20 text-xl bg-linear-to-r from-primary to-light text-clip bg-clip-text text-transparent"><span className=" ">
                 Eden</span>Care
             </motion.h1>
             <MotionImage

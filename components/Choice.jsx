@@ -1,6 +1,6 @@
 const Choice = () => {
   return (
-    <div className="">Choice</div>
+    <div className=""></div>
   )
 }
 

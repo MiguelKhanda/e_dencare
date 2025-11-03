@@ -6,11 +6,20 @@ import { useForm } from "react-hook-form"
 const Contact = () => {
   const {register, handleSubmit, formState:{errors}} = useForm()
   return (
-    <div className="mt-400 bg-dark">
-      <h1 className="text-primary">Contact Us</h1>
-      <form>
-        <div>
-          <input type="text" />
+    <div className="mt-100 bg-dark h-screen">
+      <h1 className="text-primary pt-6 text-center">Contact Us</h1>
+      <form className="bg-primary flex flex-col w-[80%] mx-auto rounded-2xl p-5 mt-30 shadow-secondary shadow-2xl">
+        <div className="flex flex-col">
+          <label htmlFor="">Name</label>
+          <input 
+          className="outline-light border-light border-2 rounded bg-accent text-secondary"
+          {...register('name', {required:'Name is required'})}
+          />
+          {errors.name && <p>{errors.name.message}</p>}
+        </div>
+          <div className="flex flex-col">
+          <label htmlFor="">Email</label>
+          <input type="text" placeholder="Enter your name"/>
         </div>
       </form>
     </div>

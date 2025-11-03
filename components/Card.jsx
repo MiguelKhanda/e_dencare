@@ -24,8 +24,8 @@ const Card = () => {
      width={1200}
      className='absolute top-0'
      />
-     <FaArrowLeft className='h-6 w-6 absolute top-2/3 border rounded-full' onClick={handlePrev}/>
-     <FaArrowRight className='h-6 w-6 absolute top-2/3 border rounded-full right-0' onClick={handleNext}/>
+     <FaArrowLeft className='h-6 w-6 absolute top-2/3 border rounded-full text-primary' onClick={handlePrev}/>
+     <FaArrowRight className='h-6 w-6 absolute top-2/3 border rounded-full right-0 text-primary' onClick={handleNext}/>
      <p className='bg-linear-to-r from-primary to-light absolute top-0 w-full'>{service_Data[currentIndex].service}</p>
      <div className='absolute -bottom-60'>
         <Button text='Learn more'/>

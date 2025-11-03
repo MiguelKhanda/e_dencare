@@ -43,7 +43,7 @@ const Navbar = () => {
                   initial={{x:100}}
                   animate={{x:0}}
                   transition={{duration:0.5}}
-              className="menu p-2 rounded bg-accent z-50 absolute right-10 sm:hidden">
+              className="menu p-2 rounded bg-accent z-50 absolute right-5 sm:hidden">
                   <MotionIcon
                   className='text-3xl text-light opacity-65 z-50 sm:hidden' onClick={()=>handleClick()}
                   />

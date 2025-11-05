@@ -1,15 +1,15 @@
 'use client'
-import React, { useEffect, useState } from 'react'
-import { choice_Data } from './db'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import Button from './Button'
 
-const ChoiceSlider = () => {
+const ChoiceSlider = ({data}) => {
     const [current, setCurrent] = useState(0)
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrent((prev)=>prev === choice_Data.length-1?0:prev+1)
-        }, 3000)
+            setCurrent((prev)=>prev === data.length-1?0:prev+1)
+        }, 4000)
         return () => clearInterval(interval)
     },[])
   return (
@@ -18,7 +18,7 @@ const ChoiceSlider = () => {
             animate={{x:`-${current * 100}%`}}
             transition={{type:'spring', stiffness:50,damping:20}}
         >
-            {choice_Data.map(({id,image,service,h1}) => (
+            {data.map(({id,image,service,h1}) => (
                 <div 
                     className='flex flex-col min-w-full relative' key={id}>
                     <Image
@@ -30,6 +30,9 @@ const ChoiceSlider = () => {
                     />
                     <h1 className='text-center text-secondary mt-10'>{h1}</h1>
                     <p className='text-center'>{service}</p>
+                    <div className='self-center'>
+                        <Button text={'Learn more'}/>
+                    </div>
             </div>
             ))}
         </motion.div>

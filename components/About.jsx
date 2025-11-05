@@ -7,7 +7,7 @@ import Button from "./Button"
 
 const About = () => {
   return (
-    <div className="h-screen bg-dark -z-10 flex flex-col  items-center  relative ">
+    <div className="h-screen bg-dark -z-10 flex flex-col  items-center justify-center  relative ">
       <Image 
        alt="background"
        src='/images/about-bg.jpg'
@@ -35,8 +35,8 @@ const About = () => {
           We strive to empower communities, influence policy, and promote sustainable
           practices through our tailored services.
         </p>
-        <Button text={'More on Us'}/>
       </motion.div>
+      <Button text='Learn more'/>
     </div>
   )
 }

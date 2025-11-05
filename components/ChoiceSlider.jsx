@@ -26,7 +26,7 @@ const ChoiceSlider = ({data}) => {
                         alt='Choose Us'
                         width={500}
                         height={500}
-                        className='h-80 object-fit mt-10'
+                        className='h-80 object-fit mt-10 flex self-center md:h-100'
                     />
                     <h1 className='text-center text-secondary mt-10'>{h1}</h1>
                     <p className='text-center'>{service}</p>

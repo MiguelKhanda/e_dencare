@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion'
 import React from 'react'
 
-const Button = ({text, isAnimate}) => {
+const Button = ({text, align}) => {
   return (
     <motion.div
      initial={{y:30, scale:0}}

@@ -16,19 +16,19 @@ const Card = () => {
   }
   
   return (
-   <div className='z-40 pt-40 relative'>
+   <div className='z-40 pt-40 relative w-50 h-50'>
     <Image
      src={service_Data[currentIndex].image} 
      alt='Image'
      height={800}
      width={1200}
-     className='absolute top-0'
+     className='absolute top-0 h-full w-full border-primary border-2 p-6 rounded-4xl mt-30'
      />
      <FaArrowLeft className='h-6 w-6 absolute top-2/3 border rounded-full text-primary' onClick={handlePrev}/>
      <FaArrowRight className='h-6 w-6 absolute top-2/3 border rounded-full right-0 text-primary' onClick={handleNext}/>
      <p className='bg-linear-to-r from-primary to-light absolute top-0 w-full'>{service_Data[currentIndex].service}</p>
-     <div className='absolute -bottom-60'>
-        <Button text='Learn more'/>
+     <div className='flex justify-center'>
+        <Button text='Learn more' align='center'/>
      </div>
    </div>
   )

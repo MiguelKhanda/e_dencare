@@ -10,13 +10,15 @@ const Contact = () => {
     
   }
   return (
-    <div className="mt-100 bg-dark h-screen">
+    <div className="bg-dark h-screen">
+      <hr className="w-full text-primary shadow-2xl shadow-secondary"/>
       <h1 className="text-primary pt-6 text-center">Contact Us</h1>
-      <form onSubmit={handleSubmit(onSubmit)} className="bg-primary flex flex-col w-[80%] mx-auto rounded-2xl p-5 mt-30 shadow-secondary shadow-2xl">
+      <form onSubmit={handleSubmit(onSubmit)} className="bg-primary flex flex-col w-[90%] mx-auto rounded-2xl p-5 mt-30 shadow-secondary shadow-2xl sm:w-[70%] sm:py-12 md:w-[40%] md:p-10">
         <div className="flex flex-col">
           <label htmlFor="">Name</label>
           <input 
-          className="outline-light border-light border-2 rounded bg-accent text-secondary"
+          placeholder="Jean Christophe"
+          className="px-2 outline-light border-light border-2 rounded bg-accent text-secondary"
           {...register('name', {required:'Name is required'})}
           />
           {errors.name && <p>{errors.name.message}</p>}
@@ -24,8 +26,9 @@ const Contact = () => {
           <div className="flex flex-col">
           <label htmlFor="">Email</label>
           <input 
+          placeholder="jeanchriskas@gmail.com"
           type="text" 
-          className="outline-light border-light border-2 rounded bg-accent text-secondary"
+          className="px-2 outline-light border-light border-2 rounded bg-accent text-secondary"
           {...register('email', {
             required: 'Email is required', 
             pattern:{
@@ -38,7 +41,8 @@ const Contact = () => {
           {errors.email && <p>{errors.email.message}</p>}
         </div>
         <div>
-          <textarea className="bg-accent text-light w-full mt-6 rounded p-6 h-30"
+          <label>Message</label>
+          <textarea placeholder="Write to us" className="bg-accent w-full mt-1 rounded p-2 h-30 md:h-50 text-secondary"
           {...register('message', {
             required:'Message is required',
             minLength:{value:10, message:'Minimum 10 characters'}

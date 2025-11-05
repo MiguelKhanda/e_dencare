@@ -3,17 +3,11 @@ import Card from "./Card"
 
 const Services = () => {
   return (
-    <div className='relative flex flex-col'>
-      <h1 className="text-center text-dark pt-8">Our Services</h1>
-      <Image
-        src= '/images/service-bg.jpg'
-        width={1200}
-        height={800}
-        alt="Background"
-        className="w-full absolute -z-50 object-cover top-0 inset-0 h-screen"
-        priority
-      />
-      <Card/>
+    <div className='h-screen bg-dark relative'>
+      <h1 className="text-primary text-xl text-center pt-5">Our Services</h1>
+      <div className="absolute right-0 left-0 top-1/3">
+        <Card/>
+      </div>
     </div>
   )
 }

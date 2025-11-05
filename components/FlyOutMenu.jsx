@@ -6,7 +6,7 @@ import { IoClose} from 'react-icons/io5'
 import { ToggleContext } from './Navbar'
 
 
-const SideBar = () => {
+const FlyOutMenu = () => {
   const [isClicked, setIsClicked] = useContext(ToggleContext)
   const [toggled, setToggled] = useState(0)
   const handleClick = () => {
@@ -17,7 +17,7 @@ const SideBar = () => {
   
   }
   return (
-    <div>
+    <div className=''>
         <motion.div 
           initial={{x:200}}
           animate={{x:toggled}}
@@ -43,4 +43,4 @@ const SideBar = () => {
   )
 }
 
-export default SideBar
+export default FlyOutMenu

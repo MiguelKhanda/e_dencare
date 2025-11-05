@@ -1,7 +1,7 @@
 'use client'
 import Button from './Button'
 import { useState } from 'react'
-import service_Data from './db.js'
+import {service_Data }from './db.js'
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 import Image from 'next/image'
 import { motion } from 'framer-motion'

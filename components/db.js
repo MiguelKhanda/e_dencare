@@ -1,4 +1,4 @@
-const service_Data = [
+export const service_Data = [
     {
         id:1,
         image:'/images/service-research.svg',
@@ -35,4 +35,12 @@ const service_Data = [
         service:'Soil and Water Conversation Plans and Works',
     },
 ] 
-export default service_Data
+
+export const choice_Data = [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+]

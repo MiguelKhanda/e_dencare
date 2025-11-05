@@ -15,7 +15,7 @@ const About = () => {
        className="object-cover -z-50 opacity-10 inset-0"
        priority
       />
-      <h1 className="text-primary text-2xl text-center mt-8">About Us</h1>
+      <h1 className="text-primary text-2xl text-center">About Us</h1>
       <motion.div
         initial={{opacity:0,y:50}}
         whileInView={{opacity:1,y:0}}

@@ -1,11 +1,12 @@
 'use client'
 
 import { useForm } from "react-hook-form"
-
+import Alert from './Alert'
 
 const Contact = () => {
   const {register, handleSubmit, formState:{errors}} = useForm()
   const onSubmit = (data) => {
+    <Alert/>
     console.log(data);
     
   }

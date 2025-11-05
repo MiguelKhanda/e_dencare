@@ -4,7 +4,7 @@ import {motion} from 'framer-motion'
 import Image from 'next/image'
 import { createContext, useState } from 'react'
 import {IoMenu} from 'react-icons/io5'
-import SideBar from './SideBar'
+import FlyOutMenu from './FlyOutMenu'
 import { BiLogoFacebook, BiLogoInstagram, BiLogoTwitter } from 'react-icons/bi'
 
 export const ToggleContext = createContext()
@@ -49,7 +49,7 @@ const Navbar = () => {
                   />
                 </motion.div>
               ):(            
-            <SideBar/>
+            <FlyOutMenu/>
           )}
       </nav>
     </ToggleContext>

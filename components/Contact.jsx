@@ -11,10 +11,10 @@ const Contact = () => {
     
   }
   return (
-    <div className="bg-dark h-screen">
+    <div className="bg-dark h-screen flex flex-col">
       <hr className="w-full text-primary shadow-2xl shadow-secondary"/>
       <h1 className="text-primary pt-6 text-center text-2xl">Contact Us</h1>
-      <form onSubmit={handleSubmit(onSubmit)} className="bg-primary flex flex-col w-[90%] mx-auto rounded-2xl p-5 mt-30 shadow-secondary shadow-2xl sm:w-[70%] sm:py-12 md:w-[40%] md:p-10">
+      <form onSubmit={handleSubmit(onSubmit)} className="bg-primary flex flex-col w-[90%] m-auto rounded-2xl p-5 mt-30 shadow-secondary shadow-2xl sm:w-[70%] sm:py-12 md:w-[60%] md:p-10">
         <div className="flex flex-col">
           <label htmlFor="">Name</label>
           <input 

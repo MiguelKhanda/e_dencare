@@ -12,6 +12,7 @@ const About = () => {
        alt="background"
        src='/images/about-bg.jpg'
        fill
+       sizes=""
        className="object-cover -z-50 opacity-10 inset-0"
        priority
       />

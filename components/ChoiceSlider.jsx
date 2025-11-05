@@ -1,22 +1,38 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
 import { choice_Data } from './db'
 import Image from 'next/image'
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
-
+import { motion } from 'framer-motion'
 
 const ChoiceSlider = () => {
+    const [current, setCurrent] = useState(0)
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrent((prev)=>prev === choice_Data.length-1?0:prev+1)
+        }, 3000)
+        return () => clearInterval(interval)
+    },[])
   return (
-    <div className='flex flex-col items-center justify-center'>
-        <Image
-            src={choice_Data[0].image}
-            width={600}
-            height={600}
-            alt='Why choose us'
-            className='w-[80%] relative mt-30 '
-        />
-        <FaArrowLeft className='absolute left-0'/>
-        <FaArrowRight className='absolute right-0'/>
-        <h1 className='mt-8 text-center text-primary'>{choice_Data[0].service}</h1>
+    <div className='relative w-full max-w-4xl mx-auto overflow-hidden'>
+        <motion.div className='flex'
+            animate={{x:`-${current * 100}%`}}
+            transition={{type:'spring', stiffness:50,damping:20}}
+        >
+            {choice_Data.map(({id,image,service,h1}) => (
+                <div 
+                    className='flex flex-col min-w-full relative' key={id}>
+                    <Image
+                        src={image}
+                        alt='Choose Us'
+                        width={500}
+                        height={500}
+                        className='h-50 object-fit mt-10'
+                    />
+                    <h1 className='text-center text-secondary mt-10'>{h1}</h1>
+                    <p className='text-center'>{service}</p>
+            </div>
+            ))}
+        </motion.div>
     </div>
   )
 }

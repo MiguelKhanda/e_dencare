@@ -40,25 +40,30 @@ export const choice_Data = [
     {
         id:1,
         image:'/images/choose-experts.svg',
+        h1:'Expertise',
         service:'Our team comprises highly qualified professionals with extensive experience in their respective fields',
     },
     {
         id:2,
         image:'/images/choose-innovation.svg',
+        h1:'Innovation',
         service:'We use cutting-edge methodologies and technologies to deliver innovative solutions',
     },
     {
         id:3,
-        image:'/images/choose-sustainablity.svg',
+        image:'/images/choose-sustainability.svg',
+        h1:'Sustainability',
         service:'We are committed to promoting sustainable practices and ensuring long-term positive impacts',
     },
     {
         id:4,
+        h1:'Community Focus',
         image:'/images/choose-community.svg',
         service:'We prioritize community engagement and empowerment in all our projects',
     },
     {
         id:5,
+        h1:'Client-Centric Approach',
         image:'/images/choose-client.svg',
         service:'We tailor our services to meet the unique needs of each client,ensuring maximum satisfaction and impact',
     },

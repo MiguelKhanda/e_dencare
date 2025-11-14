@@ -9,7 +9,7 @@ const ChoiceSlider = ({data}) => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrent((prev)=>prev === data.length-1?0:prev+1)
-        }, 4000)
+        }, 6000)
         return () => clearInterval(interval)
     },[])
   return (

@@ -3,6 +3,7 @@ import Image from "next/image"
 import Button from "./Button"
 import { motion } from "framer-motion"
 import Navbar from "./Navbar"
+import Link from "next/link"
 const Hero = () => {
     const MotionImage = motion.create(Image)
   return (
@@ -17,7 +18,7 @@ const Hero = () => {
             muted
             playsInline
             onContextMenu={(e) => e.preventDefault()}
-            className='w-full h-screen object-cover opacity-20 z-10 absolute'
+            className='w-full h-screen object-cover opacity-20 z-10 absolute pointer-events-none'
         >
             <source src = '/videos/Bg-Video.webm' type='video/webm'/>
         </motion.video>
@@ -47,7 +48,9 @@ const Hero = () => {
             className="text-center text-md bg-linear-to-r from-light to-primary bg-clip-text text-transparent md:text-xl">
                 EdenCare is a bridge. Education, the environment, agriculture, weather, and society. All in one place. 
             </motion.p>
-            <Button text='Consult' className='hover:bg-accent'/>
+            <Link href ='#contact' scroll={true}>
+                <Button text='Consult' className='hover:bg-accent'/>
+            </Link>
         </div>
     </section>
 )

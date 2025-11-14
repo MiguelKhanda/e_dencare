@@ -1,8 +1,8 @@
 'use client'
-
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Button from "./Button"
+import Link from "next/link"
 
 
 const About = () => {
@@ -37,7 +37,11 @@ const About = () => {
           practices through our tailored services.
         </p>
       </motion.div>
-      <Button text='Learn more'/>
+      <div>
+        <Link href='/about'>
+          <Button text='Learn more'/>
+        </Link>
+      </div>
     </div>
   )
 }

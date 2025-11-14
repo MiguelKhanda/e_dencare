@@ -6,7 +6,7 @@ const page = () => {
     <div className='bg-dark'>
         <div className='w-[95%] mx-auto'>
             <h1 className='text-xl bg-linear-to-r from-primary to-secondary text-transparent bg-clip-text text-center pt-4'>More on Us</h1>
-            <p className='text-light'>For consultancy purposes, involve us. Meet the exciting team that turns your idea to real world vetures.</p>
+            <p className='text-light text-lg'>For consultancy purposes, involve us. Meet the exciting team that turns your idea to real world vetures.</p>
         </div>
         <Hero/>
         <Individual/>

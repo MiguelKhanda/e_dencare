@@ -7,13 +7,13 @@ import Link from "next/link"
 
 const About = () => {
   return (
-    <div className="h-screen bg-dark -z-10 flex flex-col  items-center justify-center  relative ">
+    <div className="h-screen bg-dark z-50 flex flex-col  items-center justify-center  relative ">
       <Image 
        alt="background"
        src='/images/about-bg.jpg'
        fill
        sizes=""
-       className="object-cover -z-50 opacity-10 inset-0"
+       className="object-cover -z-50 opacity-10 inset-0 pointer-events-none"
        priority
       />
       <h1 className="text-primary text-2xl text-center">About Us</h1>
@@ -39,7 +39,7 @@ const About = () => {
       </motion.div>
       <div>
         <Link href='/about'>
-          <Button text='Learn more'/>
+          <Button text="Learn more"></Button>
         </Link>
       </div>
     </div>

@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Button from './Button'
+import Link from 'next/link'
 
 const ChoiceSlider = ({data}) => {
     const [current, setCurrent] = useState(0)
@@ -13,7 +14,7 @@ const ChoiceSlider = ({data}) => {
         return () => clearInterval(interval)
     },[])
   return (
-    <div className='relative w-full max-w-4xl mx-auto overflow-hidden'>
+    <div className='relative w-full max-w-4xl mx-auto overflow-hidden bg-light rounded-4xl shadow-2xl shadow-dark'>
         <motion.div className='flex'
             animate={{x:`-${current * 100}%`}}
             transition={{type:'spring', stiffness:50,damping:20}}
@@ -31,7 +32,9 @@ const ChoiceSlider = ({data}) => {
                     <h1 className='text-center text-secondary mt-10'>{h1}</h1>
                     <p className='text-center'>{service}</p>
                     <div className='self-center'>
-                        <Button text={'Learn more'}/>
+                        <Link href ='services/'>
+                            <Button text={'Learn more'}/>
+                        </Link>
                     </div>
             </div>
             ))}

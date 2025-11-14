@@ -7,8 +7,7 @@ import Link from "next/link"
 const Hero = () => {
     const MotionImage = motion.create(Image)
   return (
-    <section className="[background:radial-gradient(125%_125%_at_50%_10%,#252627_55%,#6BD425_100%)] flex items-center h-screen">
-        <Navbar/>
+    <section id="hero" className="[background:radial-gradient(125%_125%_at_50%_10%,#252627_55%,#6BD425_100%)] flex items-center h-screen">
         <motion.video
             initial={{x:-2000}}
             animate={{x:0}}

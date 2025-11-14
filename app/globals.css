@@ -56,7 +56,7 @@ p {
 
 /* 🔗 LINKS */
 a {
-  color: var(--color-primary);
+  color: var(--color-dark) || var(--color-secondary);
   text-decoration: none;
 }
 

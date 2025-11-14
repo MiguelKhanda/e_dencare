@@ -7,7 +7,7 @@ import Link from "next/link"
 
 const About = () => {
   return (
-    <div className="h-screen bg-dark z-50 flex flex-col  items-center justify-center  relative ">
+    <section id="about" className="h-screen bg-dark z-50 flex flex-col  items-center justify-center  relative ">
       <Image 
        alt="background"
        src='/images/about-bg.jpg'
@@ -42,7 +42,7 @@ const About = () => {
           <Button text="Learn more"></Button>
         </Link>
       </div>
-    </div>
+    </section>
   )
 }
 

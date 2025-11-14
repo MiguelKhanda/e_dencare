@@ -20,7 +20,7 @@ const Individual = () => {
                         height={800}                       
                         width={800}
                         alt={data.name}
-                        className='rounded 60 h-[95%] my-auto'
+                        className='rounded 60 h-[90%] my-auto'
                     />
                 </div>
             </div>

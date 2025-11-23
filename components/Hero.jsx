@@ -7,7 +7,8 @@ import Link from "next/link"
 const Hero = () => {
     const MotionImage = motion.create(Image)
   return (
-    <section id="hero" className="[background:radial-gradient(125%_125%_at_50%_10%,#252627_55%,#6BD425_100%)] flex items-center h-screen">
+    <section id="hero" className="[background:radial-gradient(125%_125%_at_50%_10%,#252627_55%,#6BD425_100%)] flex items-center h- flex-col min-h-screen">
+        <Navbar/>
         <motion.video
             initial={{x:-2000}}
             animate={{x:0}}
@@ -26,7 +27,7 @@ const Hero = () => {
             initial={{y:-10, scale:0}}
             animate={{y:0, scale:1}}
             transition={{duration:2,}}
-            className="mt-20 text-xl bg-linear-to-r from-primary to-light text-clip bg-clip-text text-transparent"><span className=" ">
+            className="mt-60 text-xl bg-linear-to-r from-primary to-light text-clip bg-clip-text text-transparent"><span className=" ">
                 Eden</span>Care
             </motion.h1>
             <MotionImage

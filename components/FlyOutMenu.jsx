@@ -20,19 +20,19 @@ const FlyOutMenu = () => {
   
   }
   return (
-    <div id='menu' className=''>
+    <div id='menu' className='absolute h-screen z-50'>
         <motion.div 
           initial={{x:200}}
           animate={{x:toggled}}
           transition={{duration:0.5, ease:'easeInOut'}}
-          className="fixed right-0 top-0 bg-accent px-10 z-50 h-screen flex flex-col gap-5 text-secondary text-md items-center md:hidden">
+          className="opacity-100 fixed right-0 top-0 bg-accent px-10 z-50 h-screen flex flex-col gap-5 text-secondary text-md items-center md:hidden inset -0">
           <IoClose
               className=' mt-10 text-3xl hover:text-primary' onClick={()=>handleClick()}
           />
           <ul className='mt-20 flex flex-col gap-5'>
-              <li className='hover:text-secondary hover:bg-dark p-2 rounded text-center'><Link href = '#home'>Hero</Link></li>
+              <li className='hover:text-secondary hover:bg-dark p-2 rounded text-center'><Link href = '#home'>Home</Link></li>
               <li className='hover:text-secondary hover:bg-dark p-2 rounded text-center'><Link href = '#about'>About</Link></li>
-              <li className='hover:text-secondary hover:bg-dark p-2 rounded text-center'><Link href = '#service0s'>Services</Link></li>
+              <li className='hover:text-secondary hover:bg-dark p-2 rounded text-center'><Link href = '#service'>Services</Link></li>
               <li className='hover:text-secondary hover:bg-dark p-2 rounded text-center text-secondary'><Link href = '#choice'>Why Choose Us</Link></li>
               <li className='hover:text-primary hover:bg-dark p-2 rounded text-center'><Link className='text-secondary' href = '#contact'>Contact</Link></li>
           </ul>

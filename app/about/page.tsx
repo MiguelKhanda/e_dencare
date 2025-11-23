@@ -1,5 +1,6 @@
 import Individual from '@/components/about/Individual'
 import Hero from '@/components/about/Hero'
+import Link from 'next/link'
 
 const page = () => {
   return (
@@ -10,6 +11,9 @@ const page = () => {
         </div>
         <Hero/>
         <Individual/>
+        <div className='flex items-center justify-center pb-10'>
+          <Link href ='/' className='p-4 rounded-2xl bg-primary text-secondary'>Home</Link>
+        </div>
     </div>
   )
 }

@@ -7,14 +7,14 @@ import Link from "next/link"
 
 const About = () => {
   return (
-    <section id="about" className="h-screen bg-dark z-50 flex flex-col  items-center justify-center  relative ">
+    <section id="about" className="h-screen bg-dark z-40 flex flex-col  items-center justify-center  relative ">
       <Image 
-       alt="background"
-       src='/images/about-bg.jpg'
-       fill
-       sizes=""
-       className="object-cover -z-50 opacity-10 inset-0 pointer-events-none"
-       priority
+        alt="background"
+        src='/images/about-bg.jpg'
+        fill
+        sizes=""
+        className="object-cover -z-50 opacity-10 inset-0 pointer-events-none"
+        priority
       />
       <h1 className="text-primary text-2xl text-center">About Us</h1>
       <motion.div

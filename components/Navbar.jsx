@@ -18,7 +18,7 @@ const Navbar = () => {
   const MotionIcon = motion.create(IoMenu)
   return (
     <ToggleContext value = {[isClicked, setIsClicked]}>
-      <nav className='flex w-full bg-primary items-center justify-between sm  px-3 py-0 backdrop-blur-md opacity-100 top-0 left-0 border-b-2 border-accent z-50'>
+      <nav className='fixed flex w-full bg-primary items-center justify-between sm  px-3 py-0 backdrop-blur-md opacity-60 top-0 left-0 border-b-2 border-accent z-50'>
           <Image
               src='/images/logo.png'
               alt='EdenCare logo'
@@ -29,13 +29,11 @@ const Navbar = () => {
           />
           <ul className='gap-1 items-center justify-center hidden md:text-xl sm:flex md:gap-5 text-md z-50 text-dark'>
             <Link href='#home' scroll={true} className='p-4 hover:text-secondary hover:bg-accent rounded text-dark'>Home</Link>
+            <Link href='#about' scroll={true} className='p-4 hover:text-secondary hover:bg-accent rounded text-dark'>About</Link>
+            <Link href='#service' scroll={true} className='p-4 hover:text-secondary hover:bg-accent rounded text-dark'>Services</Link>
+            <Link href='#choice' scroll={true} className='p-4 hover:text-secondary hover:bg-accent rounded text-dark'>Why Choose Us</Link>
+            <Link href='#contact' scroll={true} className='p-4 hover:text-secondary hover:bg-accent rounded text-dark'>Contact</Link>
             
-            <li className='p-4 hover:text-secondary hover:bg-accent rounded'><Link href=''>About</Link></li>
-            <li className='p-4 hover:text-secondary hover:bg-accent rounded'><Link href='#service' scroll={true
-
-            }>Services</Link></li>
-            <li className='p-4 hover:text-secondary hover:bg-accent rounded'><Link href='#choice' scroll={true}>Why Choose Us</Link></li>
-            <li className='p-4 hover:text-secondary hover:bg-accent rounded'><Link href='#contact' scroll={true}>Contact</Link></li>
           </ul>
           <ul className='gap-2  hidden sm:flex md:gap-6'>
             <BiLogoFacebook size={28} className='hover:text-secondary'/>

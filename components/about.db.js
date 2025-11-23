@@ -1,11 +1,11 @@
 const data = [
     {
         id: 1,
-        name: "Jeanette Kryslik",
+        name: "Dr Nyangasi Joy",
         age: 34,
-        education: 'BSc Environmental Science',
-        insights: 'Take care of mother nature and mother nature will take care of you',
-        imageUrl: '/images/about-one.jpg',
+        education: ' PhD in Crop Germplasm Resources',
+        insights: 'Promoting a holistic growth and community empowerment.',
+        imageUrl: '/images/joy-img.jpg',
     },
     {
         id: 2,

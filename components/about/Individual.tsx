@@ -14,7 +14,7 @@ const Individual = () => {
                         height={1200}                       
                         width={1200}
                         alt={data.name}
-                        className='rounded-full md:rounded-full 60 h-50 w-50'
+                        className='rounded-full md:rounded-full h-50 w-50'
                     />
                 </div>
                 <div className='w-4/5 bg-linear-to-r  from-secondary to-primary text-transparent bg-clip-text text-xs mx-auto'>

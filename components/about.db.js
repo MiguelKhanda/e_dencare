@@ -14,11 +14,11 @@ const data = [
         imageUrl: '/images/about-two.jpg',
     },
     {
-        name: "Caroline Agosa Kirungu",
+        name: "Caroline Agosa",
         id: 3,
-        // education: 'BSc Public Relations',
+        // education: 'BSc Public Relatiotns',
         // insights: 'Devoted too streamlinng the works',
-        imageUrl: '/images/caroline.jpg',
+        imageUrl: '/images/caroline-picture.jpg',
     },
     {
         name: "Jslik Hnadle",

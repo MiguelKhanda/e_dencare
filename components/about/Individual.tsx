@@ -11,10 +11,10 @@ const Individual = () => {
                 <div className='w-1/2 items-center flex mx-auto'>
                     <Image
                         src = {data.imageUrl}
-                        height={800}                       
-                        width={800}
+                        height={1200}                       
+                        width={1200}
                         alt={data.name}
-                        className='rounded-full md:rounded-full 60 h-[95%] my-auto'
+                        className='rounded-full md:rounded-full 60 h-50 w-50'
                     />
                 </div>
                 <div className='w-4/5 bg-linear-to-r  from-secondary to-primary text-transparent bg-clip-text text-xs mx-auto'>

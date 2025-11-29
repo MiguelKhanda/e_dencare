@@ -12,7 +12,7 @@ const Contact = () => {
     setAlert(true)
     setTimeout(()=>{
       setAlert(false)
-    },2000)
+    },4000)
   }
 
   const onSubmit = (data) => {
@@ -36,7 +36,7 @@ const Contact = () => {
   }
   return (
     <section id ='contact' className="bg-dark flex flex-col sm:pb-40 pb-40">
-      <span className={`top-0 fixed self-center z-50 px-6 py-16 bg-secondary rounded-2xl text-dark shadow-lg shadow-primary ${alert?'block':'hidden'}`}>Your message has been received</span>
+      <span className={`top-0 fixed self-center z-50 px-6 py-16 bg-secondary rounded-2xl text-dark shadow-lg shadow-primary ${alert?'block':'hidden'} opacity-65`}>Your message has been received</span>
       <hr className="w-full text-primary shadow-2xl shadow-secondary"/>
       <h1 className="text-primary pt-6 text-center text-2xl">Contact Us</h1>
       <form ref={formRef} onSubmit={handleSubmit(onSubmit)} className="bg-primary flex flex-col w-[90%] m-auto rounded-2xl p-5 mt-30 shadow-secondary shadow-2xl sm:w-[60%] sm:py-12 md:w-[35%] md:p-10">

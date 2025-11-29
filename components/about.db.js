@@ -25,14 +25,14 @@ const data = [
         id: 4,
         education: 'BSc Environmental Science',
         insights: 'Take care of mother nature and mother nature will take care of you',
-        imageUrl: '/images/about-four.jpg',
+        imageUrl: '/images/about-fourth.jpg',
     },
     {
         id: 5,
         name: "Schneider Laughtworth",
         education: 'BSc Environmental Science',
         insights: 'Take care of mother nature and mother nature will take care of you',
-        imageUrl: '/images/about-last.jpg',
+        imageUrl: '/images/about-five.jpg',
     },
 
 ]

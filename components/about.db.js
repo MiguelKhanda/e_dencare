@@ -11,7 +11,7 @@ const data = [
         name: "Alice Nekesa Kirungu",
         education: 'BA Community Development',
         insights: 'A consultant in international dealings',
-        imageUrl: '/images/about-two.jpg',
+        imageUrl: '/images/about-three.jpg',
     },
     {
         name: "Caroline Agosa",

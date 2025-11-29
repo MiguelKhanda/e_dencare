@@ -6,6 +6,15 @@ const Contact = () => {
   const {register, handleSubmit, formState:{errors}, reset} = useForm()
   const formRef = useRef()
   const [status, setStatus] = useState(null)
+  const [alert, setAlert] = useState(false)
+
+  const showAlert = () => {
+    setAlert(true)
+    setTimeout(()=>{
+      setAlert(false)
+    },2000)
+  }
+
   const onSubmit = (data) => {
    emailjs.sendForm(
     'service_l6udqpa',
@@ -14,7 +23,7 @@ const Contact = () => {
     'xLcvI02xJ2CCF_-F0'
    ).then(
     (result) => {
-      console.log(result.text);
+      showAlert()
       setStatus({type:'success',message:'Message sent successfully'})
       reset()
     },
@@ -27,9 +36,10 @@ const Contact = () => {
   }
   return (
     <section id ='contact' className="bg-dark flex flex-col sm:pb-40 pb-40">
+      <span className={`top-0 fixed self-center z-50 px-6 py-16 bg-secondary rounded-2xl text-dark shadow-lg shadow-primary ${alert?'block':'hidden'}`}>Your message has been received</span>
       <hr className="w-full text-primary shadow-2xl shadow-secondary"/>
       <h1 className="text-primary pt-6 text-center text-2xl">Contact Us</h1>
-      <form ref={formRef} onSubmit={handleSubmit(onSubmit)} className="bg-primary flex flex-col w-[90%] m-auto rounded-2xl p-5 mt-30 shadow-secondary shadow-2xl sm:w-[70%] sm:py-12 md:w-[50%] md:p-10">
+      <form ref={formRef} onSubmit={handleSubmit(onSubmit)} className="bg-primary flex flex-col w-[90%] m-auto rounded-2xl p-5 mt-30 shadow-secondary shadow-2xl sm:w-[60%] sm:py-12 md:w-[35%] md:p-10">
         <div className="flex flex-col">
           <label htmlFor="">Name</label>
           <input 

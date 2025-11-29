@@ -21,14 +21,16 @@ export default function OneSlider({data}) {
             <Slider {...settings}>
                 {data.map(({image,id,service,h1}) => (
                      <div 
-                        className='flex flex-col min-w-full relative' key={id}>
-                        <Image
-                            src={image}
-                            alt='Choose Us'
-                            width={500}
-                            height={500}
-                            className='h-80 object-fit mt-10 flex self-center md:h-100'
-                        />
+                        className='flex flex-col min-w-full relative justify-center items-center' key={id }>
+                        <div className="mx-[10%] md:mx-[20%]  w-90%">
+                            <Image
+                                src={image}
+                                alt='Choose Us'
+                                width={500}
+                                height={500}
+                                className='h-80 object-center mt-10 flex self-center md:h-100'
+                            />
+                        </div>
                         <h1 className='text-center text-secondary mt-10'>{h1}</h1>
                         <p className='text-center'>{service}</p>
                         <div className='self-center'>

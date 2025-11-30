@@ -31,8 +31,8 @@ export default function OneSlider({data}) {
                                 className='h-80 object-center mt-10 flex self-center md:h-100'
                             />
                         </div>
-                        <h1 className='text-center text-secondary mt-10'>{h1}</h1>
-                        <p className='text-center'>{service}</p>
+                        <h1 className='text-center text-light mt-10'>{h1}</h1>
+                        <p className='text-center text-light'>{service}</p>
                         <div className='self-center'>
                         </div>
                 </div>

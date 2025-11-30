@@ -22,7 +22,7 @@ const About = () => {
         whileInView={{opacity:1,y:0}}
         transition={{duration:4,ease:'easeOut'}}
         viewport={{once:true}}
-       className="w-[90%] mx-auto tracking-wide z-20 mt-20 md:text-xl bg-linear-to-r from-light to-secondary text-transparent via-primary bg-clip-text">
+       className="w-[90%] mx-auto tracking-wide z-20 mt-20 md:text-xl text-light">
         <p>
           <span className="text-secondary">EdenCare Consultants </span>is a premier consulting firm that delivers comprehensive and innovative solutions
           across multiple sectors.
